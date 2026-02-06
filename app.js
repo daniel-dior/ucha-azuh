@@ -2,6 +2,20 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mobileOverlay = document.querySelector('.mobile-nav-overlay');
 const mobileClose = document.querySelector('.mobile-close');
 
+// About Section Read More Toggle
+function toggleAboutContent() {
+    const expandedContent = document.getElementById('aboutExpanded');
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    
+    if (expandedContent.style.display === 'none') {
+        expandedContent.style.display = 'block';
+        readMoreBtn.textContent = 'Read Less';
+    } else {
+        expandedContent.style.display = 'none';
+        readMoreBtn.textContent = 'Read More';
+    }
+}
+
 // Sticky Navigation Scroll Effect
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.site-header');
